@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "com.unifyed.JCSUOfficial" version   = "1.0.0" versionCode="10002">
+        <name>Information Gateway</name>
+        <description>Johnson C. Smith University</description>
+        <author href="http://kryptosmobile.com" email="info@kryptosmobile.com">Kryptos Mobile Team</author>
+        <feature name="http://api.phonegap.com/1.0/device" />
+        
+        <preference name="permissions"                value="none"/>
+        <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
+        <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+        <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
+        <preference name="webviewbounce"              value="false" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+        <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+        <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+        <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+        <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+        <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+        <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+        <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+        <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+        <preference name="android-minSdkVersion"      value="19" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+        
+        <preference name="android-targetSdkVersion" value="26" />
+        
+        <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+        <preference name="SplashScreenDelay" value="6000" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarBackgroundColor" value="#000000" />
+        <preference name="StatusBarStyle" value="lightcontent" />
+        <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+        
+       <icon src="icon.png" />
+        <platform name="android">
+            <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+            <icon density="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+            <icon density="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+            <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+            <icon density="xxhdpi" src="res/icon/android/icon-144-xxhdpi.png" />
+            <icon density="xxxhdpi" src="res/icon/android/icon-192-xxxhdpi.png" />
+        </platform>
+        <platform name="ios">
+            <icon height="29" src="res/icon/ios/icon-small.png" width="29" />
+            <icon height="58" src="res/icon/ios/icon-small-2x.png" width="58" />
+            <icon height="87" src="res/icon/ios/icon-small-3x.png" width="87" />
+            <icon height="40" src="res/icon/ios/icon-40.png" width="40" />
+            <icon height="80" src="res/icon/ios/icon-40-2x.png" width="80" />
+            <icon height="120" src="res/icon/ios/icon-40-3x.png" width="120" />
+            <icon height="50" src="res/icon/ios/icon-50.png" width="50" />
+            <icon height="100" src="res/icon/ios/icon-50-2x.png" width="100" />
+            <icon height="57" src="res/icon/ios/icon-57.png" width="57" />
+            <icon height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
+            <icon height="60" src="res/icon/ios/icon-60.png" width="60" />
+            <icon height="120" src="res/icon/ios/icon-60-2x.png" width="120" />
+            <icon height="180" src="res/icon/ios/icon-60-3x.png" width="180" />
+            <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+            <icon height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
+            <icon height="76" src="res/icon/ios/icon-76.png" width="76" />
+            <icon height="152" src="res/icon/ios/icon-76-2x.png" width="152" />
+            <icon height="167" src="res/icon/ios/icon-83.5-2x.png" width="167" />
+        </platform>
+        
+        <gap:splash src="splash.png" />
+        <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
+        <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
+        <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
+        <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+        
+        
+        <gap:splash src="res/screen/android/screen-ldpi-landscape.png"  gap:platform="android" gap:qualifier="land-ldpi" />
+        <gap:splash src="res/screen/android/screen-mdpi-landscape.png"  gap:platform="android" gap:qualifier="land-mdpi" />
+        <gap:splash src="res/screen/android/screen-hdpi-landscape.png"  gap:platform="android" gap:qualifier="land-hdpi" />
+        <gap:splash src="res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:qualifier="land-xhdpi" />
+        
+        
+        <gap:splash src="res/screen/ios/screen-iphone-portrait.png"    gap:platform="ios"     width="320" height="480" />
+        <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
+        <gap:splash src="res/screen/ios/screen-ipad-portrait.png"          gap:platform="ios"     width="768" height="1024" />
+        <gap:splash src="res/screen/ios/screen-ipad-portrait-2x.png"       gap:platform="ios"     width="1536" height="2048" />
+        <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios" width="640" height="1136"  />
+        <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
+        <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png"     gap:platform="ios"     width="2048" height="1536" />
+        <gap:splash src="res/screen/ios/screen-iphone-landscape.png"    gap:platform="ios"     width="480" height="320" />
+        <gap:splash src="res/screen/ios/screen-iphone-landscape-2x.png" gap:platform="ios"     width="960" height="640" />
+        <!-- iPhone 6 and 6+ start-->
+        <gap:splash src="res/screen/ios/Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
+        <gap:splash src="res/screen/ios/Default-Portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
+        <gap:splash src="res/screen/ios/Default-Landscape-736h@3x.png" gap:platform="ios" width="2208" height="1242" />
+        <!-- iPhone 6 and 6+ end-->
+        
+        <access origin="*"/>
+        <allow-navigation href="*" />
+        <allow-intent href="*" />
+        <plugin name="cordova-plugin-contacts" source="npm">
+            <variable name="CONTACTS_USAGE_DESCRIPTION" value="to add contact" />
+        </plugin>
+        <gap:plugin name="cordova-plugin-camera" source="npm" />
+        <gap:plugin name="cordova-plugin-device" source="npm" />
+        <gap:plugin name="cordova-plugin-dialogs" source="npm" />
+        <gap:plugin name="cordova-plugin-file-transfer" source="npm" spec="1.6.3"/>
+        <gap:plugin name="cordova-plugin-geolocation" source="npm" spec="1.0.1"/>
+        <gap:plugin name="cordova-plugin-geolocation" source="npm" />
+        <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+        <gap:plugin name="cordova-plugin-network-information" source="npm" />
+        <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
+        <gap:plugin name="cordova-plugin-statusbar" source="npm"/>
+        
+        <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+        <gap:plugin name="cordova-plugin-globalization" source="npm" />
+        
+        
+        
+        <!--<preference name="android-build-tool" value="gradle" />-->
+
+        <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.8.2">
+            <param name="SENDER_ID" value="459115189650" />
+        </gap:plugin>
+        
+        <!-- ios sms plugin -->
+        <plugin spec="https://github.com/DevendraSinghNagar/cordova-sms-all-devices-plugin.git" source="git" />
+
+        <!-- Android sms plugin -->
+        <gap:plugin name="cordova-plugin-sms" source="npm" />
+        
+        <gap:config-file platform="ios" parent="LSApplicationQueriesSchemes" overwrite="true">
+            <array>
+                <string>canvas-student</string>
+            </array>
+        </gap:config-file>
+        
+        
+
+        <gap:plugin name="cordova-plugin-actionsheet" source="npm" />
+        <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+       
+          <gap:plugin name="cordova-plugin-phonedialer" source="npm" />
+        
+         <plugin spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
+        
+        <plugin spec="https://github.com/venkykowshik/startapp.git" source="git" />
+        
+        <gap:plugin name="cordova-plugin-phonedialer" source="npm" />
+          
+        
+        <gap:config-file platform="ios" parent="UIStatusBarHidden" overwrite="true">
+            <true/>
+        </gap:config-file>
+        
+        <platform name="ios">
+    <plugin name="cordova-custom-config" version="*"/>
+    <config-file platform="ios" target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <string>App Uses User's location services to share the current location to Alert contacts</string>
+    </config-file>
+</platform>
+        
+        <!--<gap:config-file platform="ios" parent="CFBundleVersion"><string>2.0.0</string></gap:config-file>-->
+    </widget>

@@ -1,0 +1,305 @@
+#floatingBarsG{
+    position:relative;
+    width:41px;
+    height:56px;
+    margin:auto;
+}
+
+.blockG{
+    position:absolute;
+    background-color:rgb(255,255,255);
+    width:3px;
+    height:16.2px;
+    border-radius:5px 5px 0 0;
+        -o-border-radius:5px 5px 0 0;
+        -ms-border-radius:5px 5px 0 0;
+        -webkit-border-radius:5px 5px 0 0;
+        -moz-border-radius:5px 5px 0 0;
+    transform:scale(0.4);
+        -o-transform:scale(0.4);
+        -ms-transform:scale(0.4);
+        -webkit-transform:scale(0.4);
+        -moz-transform:scale(0.4);
+    animation-name:fadeG;
+        -o-animation-name:fadeG;
+        -ms-animation-name:fadeG;
+        -webkit-animation-name:fadeG;
+        -moz-animation-name:fadeG;
+    animation-duration:0.622s;
+        -o-animation-duration:0.622s;
+        -ms-animation-duration:0.622s;
+        -webkit-animation-duration:0.622s;
+        -moz-animation-duration:0.622s;
+    animation-iteration-count:infinite;
+        -o-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite;
+        -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+        -o-animation-direction:normal;
+        -ms-animation-direction:normal;
+        -webkit-animation-direction:normal;
+        -moz-animation-direction:normal;
+}
+
+#rotateG_01{
+    left:0;
+    top:19px;
+    animation-delay:0.2295s;
+        -o-animation-delay:0.2295s;
+        -ms-animation-delay:0.2295s;
+        -webkit-animation-delay:0.2295s;
+        -moz-animation-delay:0.2295s;
+    transform:rotate(-90deg);
+        -o-transform:rotate(-90deg);
+        -ms-transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+        -moz-transform:rotate(-90deg);
+}
+
+#rotateG_02{
+    left:5px;
+    top:7px;
+    animation-delay:0.316s;
+        -o-animation-delay:0.316s;
+        -ms-animation-delay:0.316s;
+        -webkit-animation-delay:0.316s;
+        -moz-animation-delay:0.316s;
+    transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+}
+
+#rotateG_03{
+    left:18px;
+    top:2px;
+    animation-delay:0.3925s;
+        -o-animation-delay:0.3925s;
+        -ms-animation-delay:0.3925s;
+        -webkit-animation-delay:0.3925s;
+        -moz-animation-delay:0.3925s;
+    transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+}
+
+#rotateG_04{
+    right:5px;
+    top:7px;
+    animation-delay:0.469s;
+        -o-animation-delay:0.469s;
+        -ms-animation-delay:0.469s;
+        -webkit-animation-delay:0.469s;
+        -moz-animation-delay:0.469s;
+    transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+}
+
+#rotateG_05{
+    right:0;
+    top:19px;
+    animation-delay:0.5455s;
+        -o-animation-delay:0.5455s;
+        -ms-animation-delay:0.5455s;
+        -webkit-animation-delay:0.5455s;
+        -moz-animation-delay:0.5455s;
+    transform:rotate(90deg);
+        -o-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+}
+
+#rotateG_06{
+    right:5px;
+    bottom:5px;
+    animation-delay:0.622s;
+        -o-animation-delay:0.622s;
+        -ms-animation-delay:0.622s;
+        -webkit-animation-delay:0.622s;
+        -moz-animation-delay:0.622s;
+    transform:rotate(135deg);
+        -o-transform:rotate(135deg);
+        -ms-transform:rotate(135deg);
+        -webkit-transform:rotate(135deg);
+        -moz-transform:rotate(135deg);
+}
+
+#rotateG_07{
+    bottom:0;
+    left:18px;
+    animation-delay:0.6985s;
+        -o-animation-delay:0.6985s;
+        -ms-animation-delay:0.6985s;
+        -webkit-animation-delay:0.6985s;
+        -moz-animation-delay:0.6985s;
+    transform:rotate(180deg);
+        -o-transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        -moz-transform:rotate(180deg);
+}
+
+#rotateG_08{
+    left:5px;
+    bottom:5px;
+    animation-delay:0.775s;
+        -o-animation-delay:0.775s;
+        -ms-animation-delay:0.775s;
+        -webkit-animation-delay:0.775s;
+        -moz-animation-delay:0.775s;
+    transform:rotate(-135deg);
+        -o-transform:rotate(-135deg);
+        -ms-transform:rotate(-135deg);
+        -webkit-transform:rotate(-135deg);
+        -moz-transform:rotate(-135deg);
+}
+
+
+
+@keyframes fadeG{
+    0%{
+        background-color:rgba(0,0,0,0.58);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes fadeG{
+    0%{
+        background-color:rgba(0,0,0,0.58);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes fadeG{
+    0%{
+        background-color:rgba(0,0,0,0.58);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes fadeG{
+    0%{
+        background-color:rgba(0,0,0,0.58);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes fadeG{
+    0%{
+        background-color:rgba(0,0,0,0.58);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@font-face {
+    font-family: proxima;
+    src: url(ProximaNovaRegular.otf);
+}
+
+@font-face {
+    font-family: proximaBold;
+    src: url(ProximaNovaBold.otf);
+}
+
+@font-face {
+    font-family: proximaSemiBold;
+    src: url(ProximaNovaSemibold.otf);
+}
+
+.proximaSemiBoldFont{
+    font-family: proximaSemiBold;
+}
+
+.proximaFont{
+    font-family: proxima;
+}
+
+.proximaBoldFont{
+    font-family: proximaBold;
+}
+
+/* Header static CSS classes */
+.header{
+    width:100%;
+    position:fixed;
+    z-index:100;
+    border-radius:0px;
+    border:none !important;
+    padding: 16px;
+    height: 50px;
+    color:#fff;
+}
+/* Header static CSS classes ends*/
+.backButtonArrow{
+    position: absolute;
+}
+.backButtonArrow img{
+    max-width:16px;width:16px;
+}
+.app{
+    background-size:100% 100%;box-shadow:none;
+}
+.footerGroupIcons{
+    position:fixed;bottom:0px;width:100%;z-index:100;display:none;line-height: 40px;
+}
+.footerGroupIcons div div{
+    float:left;width:20%;text-align:center;
+}
+.footerGroupIcons div div a{
+    width: 100%;display: block;
+}
+.footerGroupIcons div div img{
+    width: 25px;
+}
+.bottomPoweredBy{
+    z-index:100;position:fixed;bottom:20px;width:100%;min-height:20px;border-radius:0px;border:0px;
+}
+.bottomPoweredBy div{
+    text-align:center;font-size:10px;color:#fff;
+}
+.app {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.app-body {
+    display: block;
+    height: 100%;
+    padding: 0;
+}
+.app-content {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+

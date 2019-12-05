@@ -1,0 +1,122 @@
+<style>
+    .appgroup {
+        background: rgb(96,108,136); /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  rgba(96,108,136,1) 0%, rgba(63,76,107,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(96,108,136,1)), color-stop(100%,rgba(63,76,107,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* IE10+ */
+        background: linear-gradient(135deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        color:white;font-size:17px;font-weight:normal;
+    }
+
+    </style>
+
+<!--<div class="navbar-brand" style="color:white;font-weight=bold;" ng-bind="appDisplayName"></div>-->
+
+<div class="scrollable sidebar-scrollable" style="background:#f3f3f3;" class='openSans' ng-show="metadata">
+    <div class="scrollable-content" style="overflow: auto;background: #fff;">
+        <div class="list-group" toggle="off" bubble target="mainSidebar">
+            <!--<a aria-label="Home" class="list-group-item" style="padding:9px 0 9px 20px;font-size:16px;font-weight:normal;background: #eceaeb;" href="#/app/Notification/Notification">
+             <div style='display:block;'><i class="fa fa-flag fa-2x" style='color:#bbb;'></i>
+             <span class="badge" style="margin-top: -2px;margin-left: -12px;position:absolute;font-weight:normal;background:#e30000 none repeat scroll 0% 0%;font-size:10px;" class='notificationCount' ng-bind="notificationCounts" ng-show='ShowPushCounts'></span>
+             </div>
+             </a>-->
+            <!--<a aria-label="Home" class="list-group-item" href="#/home" style="padding:5px 0 5px 20px;font-size:16px;font-weight:normal;">
+             <img class="avatar" style="width:8%;" src="images/home.png"  alt="">
+             <span style="font-size:12px;margin-left:10px;" class='openSans'>Home</span>
+             </a>-->
+            
+            <a aria-label="Home" class="list-group-item" href="#/app/ProfileUpdate/ProfileUpdate" style="padding:0px;padding-left:0px !important;font-size:16px;font-weight:normal;">
+                <div class="form-group" style="margin-bottom:0px;text-align:center;padding:30px 0px;">
+                    
+                    <div class="" style="padding:0px;text-align:center;">
+                        
+                        <div style="height:auto;width:100%;max-height:110px;max-width:110px;overflow: hidden;border-radius:50%;margin:auto;position:relative;">
+                        <img ng-src="{{userProfilePic}}" style='width:100%;'/>
+                        </div>
+                        <div class="picEditBtn"><i class="fa fa-pencil linkColor" style="font-size: 12px;margin-top:6px;"></i></div>
+                        
+                    </div>
+                    
+                    
+                    <div class='openSans' style="margin-top:13px;">
+                        <div style='font-size:18px;'>{{userProfileName}}</div>
+                        <div style='font-size:12px;'>{{studentRole}}</div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+                
+                
+                <!--<div class="form-group" style="margin-bottom:0px;" ng-hide='profileSynced'>
+                 <div class="" style="padding:0px;float:left;">
+                 <img ng-src="images/profilePic.jpg" style='height:100%;width:auto;max-height: 90px;max-width: 90px;overflow: hidden;border-radius: 3px;'/>
+                 </div>
+                 <div class="" class='openSans' style='padding-left:8px;padding-top:10px;text-align:left;float:left;'>
+                 <div style='font-size:16px;'>Vishal Singh</div>
+                 <div style='font-size:11px;'>vishalsingh@kryptosmobile.com</div>
+                 </div>
+                 <div style="clear:both"></div>
+                 </div>-->
+            </a>
+            
+            
+            <!-- <a aria-label="Login for additional features" ng-hide="loggedin" class="list-group-item" href="index.html#login" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-unlock fa-2x" style="min-width:40px;text-align:center;"></i>
+             Login for additional features
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>-->
+            
+            
+            <div ng-repeat = "ag in appgroups" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);">
+                <div class="list-group-item appgroup" ng-hide="ag.appFeatureType=='Public'">
+                    {{ag.appFeatureType}}
+                </div>
+                <a  aria-label="{{app.displayname}}" class="list-group-item"  href="#/app/{{app.name}}/{{app.name}}" ng-repeat="app in ag.apps" style="padding:5px 0 5px 20px;font-size:12px;font-weight:normal;" ng-show="app.showInHome == true">
+                    <img class="avatar" style="width:9.5%;" id="logo-{{app.name}}" src="{{app.logo}}"  alt="">
+                        <span style="font-size:13px;margin-left:3px;display:inline-block !important;margin-top:3px !important;" class='openSans'>{{app.displayname}}</span>
+                </a>
+            </div>
+            
+            <!--<div class="list-group-item appgroup" >
+             Settings
+             </div>
+             <a aria-label="Troubleshoot" id="troubleshootbtn" class="list-group-item" href="#/settings" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-refresh fa-2x" style="min-width:40px;text-align:center;"></i>
+             Reset
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>
+             <a aria-label="Help" id="helpbtn" class="list-group-item" href="#/help" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-question-circle fa-2x" style="min-width:40px;text-align:center;"></i>
+             Help
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>
+             <a aria-label="About" id="aboutbtn" class="list-group-item" href="#/about" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-sun-o fa-2x" style="min-width:40px;text-align:center;"></i>
+             About
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>
+             <a aria-label="Device Info" id="deviceinfobtn" class="list-group-item" href="#/device" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-mobile-phone fa-2x" style="min-width:40px;text-align:center;"></i>
+             My Device
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>
+             <a aria-label="Send Feedback" id="sendfeedbackbtn" class="list-group-item" href="#/sendfeedback" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-smile-o fa-2x" style="min-width:40px;text-align:center;"></i>
+             Send feedback
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>
+             <a aria-label="Report Issue" id="reportissuebtn" class="list-group-item" href="#/reportissue" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             <i class="fa fa-frown-o fa-2x" style="min-width:40px;text-align:center;"></i>
+             Report Issue
+             <i class="fa fa-chevron-right pull-right"></i>
+             </a>
+             <a  class="list-group-item" style="padding-left:20px;font-size:16px;font-weight:normal;">
+             </a>-->
+        </div>
+    </div>
+</div>
+<script>
+    
+    </script>

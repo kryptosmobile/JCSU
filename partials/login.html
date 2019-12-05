@@ -1,0 +1,71 @@
+<style>#branding {
+    display: none;
+}
+input[type=checkbox].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:29px;
+    height:24px;
+    display:inline-block;
+    line-height:24px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:10px;
+    vertical-align:middle;
+    cursor:pointer;
+    
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -24px;
+}
+label.css-label {
+				background-image:url("images/checkbox.png");
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+}
+</style>
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="1container" style="padding:10px;">
+            <div class="1row">
+                <div style='text-align:center;'>
+                    <img id="loginbranding" style='width:290px;height:70px;' src="{{brandingUrl}}"/>
+                </div>
+            </div>
+            <div class="1container" style="padding:5px;">
+                <form role="form" ng-submit="login();">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                            <input name="loginUsername" id="loginUsername" type="text" class="form-control"
+                                   placeholder="NSHE ID" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="fa fa-lock"></span></span>
+                            <input name="loginPassword" id="loginPassword" type="password" class="form-control"
+                                   placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                        </div>
+                    </div>
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox" class="css-checkbox" /><label for="checkbox" class="css-label" style="line-height:18px;">by signing up I agree to the&nbsp;<span ng-click="openterms()" style="text-decoration: underline;" class='linkColor'>End User License Agreement</span>,<span ng-click="openMasterterms()" style="text-decoration: underline;" class='linkColor'> Master Terms of Service</span>, and<span ng-click="openPolicyterms()" style="text-decoration: underline;" class='linkColor'> Privacy Policy.</span></label>
+                    <br><br>
+                    <div id="fgpassword" ng-click="forgotpassword();" class="pull-right"
+                         style="cursor:pointer;color:#fff;padding-bottom:10px;font-weight:bold;">Forgot Password?
+                    </div>
+                    <button id="loginbtn" type="submit" class="btn btn-primary btn-lg btn-block">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
