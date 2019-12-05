@@ -136,7 +136,7 @@
         <!--<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
         <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" spec="5.4.1"/>
        
-          <gap:plugin name="cordova-plugin-phonedialer" source="npm" spec="0.5.7"/>
+          <gap:plugin name="cordova-plugin-phonedialer" source="npm" spec="0.3.1"/>
         
          <plugin spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
         
