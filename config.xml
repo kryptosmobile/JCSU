@@ -110,7 +110,7 @@
         <gap:plugin name="cordova-plugin-whitelist" source="npm" />
         <gap:plugin name="cordova-plugin-globalization" source="npm" />
         
-        <uses-permission android:name="android.permission.CALL_PHONE"/>
+        <!--<uses-permission android:name="android.permission.CALL_PHONE"/>-->
         
         <!--<preference name="android-build-tool" value="gradle" />-->
 
